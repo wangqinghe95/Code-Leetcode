@@ -1,23 +1,17 @@
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-int* twoSum(int* nums, int numsSize, int target, int* returnSize)
-{
-    int *return_array = (int*)malloc(2 * sizeof(int));
-
-    for (int i = 0; i < numsSize - 1; ++i)
-    {   
-        for (int j = numsSize - 1 ; j > i; --j)
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        for (int i = 0; i < nums.size() - 1 ; ++i)
         {
-            if (nums[i] + nums[j] == target)
+            for (int j = nums.size() - 1; j > i ; --j)
             {
-                return_array[0] = i;
-                return_array[1] = j;
-                *returnSize = 2;
-                return return_array;
+                if (nums[i] + nums[j] == target)
+                {
+                    return {i, j};
+                }
             }
         }
-    }
 
-    return NULL;
-}
+        return {};
+    }
+};
