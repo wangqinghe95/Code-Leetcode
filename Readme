@@ -18,9 +18,9 @@
 [Q15]https://leetcode-cn.com/problems/3sum/
 [Q16]https://leetcode-cn.com/problems/3sum-closest/
 [Q26]https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/
-[Q42]
-[Q121]
-[Q209]
+[Q42]https://leetcode-cn.com/problems/trapping-rain-water/
+[Q121]https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/
+[Q209]https://leetcode-cn.com/problems/minimum-size-subarray-sum/
 
 快慢指针遍历
 [Q141]https://leetcode-cn.com/problems/linked-list-cycle/
@@ -40,11 +40,11 @@
 [Q8]https://leetcode-cn.com/problems/string-to-integer-atoi/
 [Q9]https://leetcode-cn.com/problems/palindrome-number/
 [Q43]https://leetcode-cn.com/problems/multiply-strings/
-[Q172]
-[Q258]
+[Q172]https://leetcode-cn.com/problems/factorial-trailing-zeroes/
+[Q258]https://leetcode-cn.com/problems/add-digits/
 
 栈相关
-[Q20]
+[Q20]https://leetcode-cn.com/problems/valid-parentheses/
 [Q32]
 [Q155]
 [Q224]
