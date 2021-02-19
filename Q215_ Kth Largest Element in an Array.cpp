@@ -108,3 +108,46 @@ public:
     }
 };
 
+
+//快排
+class Solution {
+public:
+
+    int quickSort(vector<int>& nums, int low, int high, int index) {
+        if (low < high) {
+            int pivotpos = partiotion(nums, low, high);
+            if (pivotpos == index) {
+                return nums[pivotpos];
+            }
+            else if (pivotpos > index) {
+                return quickSort(nums, 0, pivotpos - 1, index);
+            }
+            else {
+                return quickSort(nums, pivotpos + 1, high, index);
+            }
+        }
+        else{
+            return nums[index];
+        }
+    }
+
+    int partiotion(vector<int>& nums, int low, int high) {
+        int tmp = nums[low];
+        while (low < high) {
+            while (low < high && nums[high] >= tmp) {
+                high--;
+            }
+            nums[low] = nums[high];
+            while (low < high && nums[low] <= tmp) {
+                low++;
+            }
+            nums[high] = nums[low];
+        }
+        nums[low] = tmp;
+        return low;
+    }
+    int findKthLargest(vector<int>& nums, int k) {
+        return quickSort(nums, 0, nums.size() - 1, nums.size() - k);
+    }
+};
+
