@@ -1,4 +1,23 @@
-hash数组法：
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        for (int i = 0; i < nums.size() - 1 ; ++i)
+        {
+            for (int j = nums.size() - 1; j > i ; --j)
+            {
+                if (nums[i] + nums[j] == target)
+                {
+                    return {i, j};
+                }
+            }
+        }
+
+        return {};
+    }
+};
+
+
+//C
 
 /**
  * Note: The returned array must be malloced, assume caller calls free().
@@ -25,7 +44,7 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
     return NULL;
 }
 
-这种方法是对于hash初始化为-1，但是memset会影响性能，所以可以使用将所有下标序号都给往前移动一位
+//这种方法是对于hash初始化为-1，但是memset会影响性能，所以可以使用将所有下标序号都给往前移动一位
 
 /**
  * Note: The returned array must be malloced, assume caller calls free().
@@ -52,4 +71,4 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
     return NULL;
 }
 
-解题思路来自本题的题解
+
